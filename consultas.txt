@@ -1,0 +1,5 @@
+Select persona.*, contrato.cve_contra, contrato.fechaIni_contra, contrato.fechaFin_contra, contrato.puesto_contra, contrato.sueldo_contra, contrato.hrEntrada_contra, contrato.hrSalida_contra, cliente.cve_clien, cliente.credito_clien, cliente.tipo_clien from persona join cliente on persona.cve_per = cliente.cve_per join contrato on contrato.cve_per=persona.cve_per order by persona.nombre_per asc;
+
+Select persona.*, contrato.cve_contra, contrato.fechaIni_contra, contrato.fechaFin_contra, contrato.puesto_contra, contrato.sueldo_contra, contrato.hrEntrada_contra, contrato.hrSalida_contra from persona join contrato on contrato.cve_per=persona.cve_per order by persona.nombre_per asc;
+
+Select cliente.cve_clien, cliente.credito_clien,cliente.tipo_clien, persona.nombre_per, persona.paterno_per, persona.materno_per, persona.edad_per, persona.genero_per, persona.edocivil, persona.fechaNac_per from cliente join persona on cliente.cve_per = persona.cve_per order by cliente.cve_clien;

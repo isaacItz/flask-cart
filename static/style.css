@@ -1,0 +1,73 @@
+a:link {
+    color: #093;
+}
+
+a:visited {
+    color: #0C3;
+}
+
+a:hover {
+    color: #9C0;
+}
+
+a:active {
+    color: #069;
+}
+
+a {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+}
+
+.footer-inicial {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.temporadaText {
+    text-transform: uppercase;
+}
+
+.collapse ul li a {
+    font-family: 'Merriweather', serif;
+}
+
+.input_san {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form {
+    font-size: 16px;
+}
+
+form input {
+    font-size: 16px;
+}
+
+.tabla-personal {
+    margin: 0px 20px;
+}
+
+table tr td .cajaAgregar {
+    width: 200px;
+}
+
+.text-tablas {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #125B50;
+}
+
+.inputsCar {
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FF6363;
+    background: #EFEFEF;
+}
+
+.fa-cart-shopping {
+    font-size: 35px;
+}
