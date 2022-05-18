@@ -32,10 +32,28 @@ def session_management():
 @app.route("/quick-add/<id>")
 def quick_add(id):
     if 'cart' not in session:
-        session['cart'] = []
+        session['cart'] = {}
 
-    session['cart'].append({'id': id, 'quantity': 1})
+    if id in session['cart']:
+        session['cart'][id]  += 1
+    else:
+        session['cart'][id]  = 1
     session.Modified = True
+
+    return redirect(url_for('list_cart'))
+
+@app.route("/quick-remove/<id>")
+def quick_remove(id):
+    if 'cart' not in session:
+        session['cart'] = {}
+
+    if id in session['cart']:
+        quantity = session['cart'][id]
+        if quantity > 1:
+            session['cart'][id] -= 1
+        else:
+            session['cart'].pop(id)
+        session.Modified = True
 
     return redirect(url_for('list_cart'))
 
